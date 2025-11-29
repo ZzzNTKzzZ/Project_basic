@@ -1,0 +1,39 @@
+@use "../../Styles/variable" as *;
+@use "../../Styles/mixins" as *;
+
+.wrapper {
+    @include body-400;
+    font-size: 1.25rem;
+    color: $primary-color;
+    position: relative;
+  
+    &.disable {
+        pointer-events: none;
+    }
+
+    input {
+        font-size: 1.25rem;
+        padding: 0.5rem 0;
+        padding-inline: 0.5rem;
+        border: 0.5px solid $accent-color;
+    }
+
+    .list {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        z-index: 99;
+        max-height: 200px;
+        overflow-y: scroll;
+        border: 1px solid $primary-color;
+        li {
+            padding-inline: 0.5rem;
+            &:hover {
+                background-color: $accent-color;
+                color: #fff;
+                outline: 1px solid $primary-color;
+                
+            }
+        }
+    }
+}

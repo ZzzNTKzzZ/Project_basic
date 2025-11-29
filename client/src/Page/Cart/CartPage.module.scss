@@ -1,0 +1,206 @@
+@use "../../Styles/variable" as *;
+@use "../../Styles/mixins" as *;
+
+// ========================
+// WRAPPER
+// ========================
+.wrapper {
+    background-color: $secondary-color;
+    padding: 1rem 0;
+
+    .list {
+        @include body-400;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .header,
+        .body {
+            background-color: $primary-color;
+            border-radius: 1rem;
+            padding: 1.5rem 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .body {
+            flex-direction: column;
+        }
+    }
+
+    .checkboxContainer {
+        width: 5%;
+        padding-right: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       
+    }
+
+    // Columns
+    .product {
+        width: 45%;
+    }
+
+    .unitPrice,
+    .quantity,
+    .amount,
+    .actions {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .actions {
+        svg {
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+    }
+
+    .access {
+        @include body-400;
+        font-size: 1rem;
+        background-color: $primary-color;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        padding: 1.5rem 0.5rem;
+
+        .buy {
+            min-width: 250px;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            border-radius: 1rem;
+        }
+        .allItems,
+        .buy {
+            flex: 1;
+        }
+        .deleteItem,
+        .addToFav,
+        .totalItem {
+            flex: 2;
+        }
+    }
+}
+
+// ========================
+// CART ITEM
+// ========================
+.cartItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .product {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 30%;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .name {
+            font-size: 1.25rem;
+        }
+    }
+
+    .variant {
+        width: 15%;
+    }
+}
+
+// ========================
+// VARIANT POPUP
+// ========================
+.variant {
+    position: relative;
+    cursor: pointer;
+
+    &:hover .content {
+        background-color: $accent-color;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .variantOptions {
+        padding-inline: 0.5rem;
+    }
+}
+
+.variantPopup {
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - 2.5rem);
+    transform: translateX(-50%);
+    width: 200%;
+    max-width: 200%;
+    padding: 1rem 1.5rem;
+    background-color: $secondary-color;
+    border: 0.5px solid $accent-color;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    .optionGroup {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 0.25rem;
+        max-width: 100%;
+    
+        .option {
+            outline-width: 1px;
+        }
+    }
+}
+
+.variantGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+}
+
+// ========================
+// ICONS
+// ========================
+.arrowIcon {
+    transform: rotate(90deg);
+    transition: all ease 0.2s;
+
+    &.active {
+        transform: rotate(-90deg);
+    }
+}

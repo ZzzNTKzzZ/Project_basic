@@ -1,0 +1,159 @@
+@use "../../Styles/mixins" as *;
+@use "../../Styles/variable" as *;
+
+.wrapper {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+
+  .right,
+  .left {
+    @include body-400;
+    font-size: 1.125rem;
+    height: 100%;
+    border: 1px solid $accent-color;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left {
+    position: relative;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .logo {
+    @include heading-400;
+    line-height: 1.6;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $accent-color;
+    height: 100%;
+
+    a {
+      letter-spacing: 4px;
+    }
+  }
+
+  .searchBtn,
+  .cartBtn,
+  .likeBtn {
+    outline-color: $accent-color;
+
+    svg path {
+      fill: #fff;
+    }
+  }
+
+  .loginBtn {
+    background-color: #fff;
+
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+      outline: 2px solid $accent-color;
+
+      svg path {
+        fill: #fff;
+      }
+    }
+
+  }
+
+  .cart {
+    position: relative;
+    width: 27%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: -10%;
+      width: 120%;
+      height: 1rem;
+      background-color: transparent;
+    }
+
+    .noti {
+      position: absolute;
+      top: 5px;
+      right: 3px;
+      min-width: 1.25rem;
+      height: 1rem;
+      padding: 0 0.3rem;
+      border-radius: 999px;
+      background-color: #fff;
+      border: 1.5px solid #171717;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #171717;
+      line-height: 1;
+      font-size: 0.5rem;
+      font-weight: 600;
+      box-sizing: border-box;
+    }
+  }
+
+  .cartPopup {
+    display: none;
+  }
+
+  .cart:hover~.cartPopup,
+  .cartPopup:hover {
+    display: block;
+  }
+
+  .optionUser {
+    background-color: $primary-color;
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    right: 0.75rem;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    cursor: pointer;
+
+    a, span {
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .line {
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.2s ease;
+  }
+
+  &:hover .line {
+    width: 100%;
+  }
+
+
+
+}
+
+a.active {
+  .line {
+    width: 100%;
+  }
+}

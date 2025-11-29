@@ -1,0 +1,44 @@
+@use "../../Styles/variable" as *;
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    .circle {
+        cursor: pointer;
+        width: 1rem;
+        aspect-ratio: 1;
+        border: 2px solid $accent-color;
+        border-radius: 50%;
+        position: relative;
+
+        &.active {
+            border-color: #fff;
+
+            &::after {
+                content: "";
+                width: 150%;
+                height: 3px;
+                background-color: #fff;
+                position: absolute;
+                bottom: -60%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+        &:hover {
+            border-color: #fff;
+        }
+    }
+    .left {
+        transform: scaleX(-1);
+    }
+
+    .left,
+    .right {
+        cursor: pointer;
+    }
+}

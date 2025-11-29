@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "password": "password123",
+    "image": "https://i.pravatar.cc/150?img=1",
+    "phone": "0123456789",
+    "address": [
+      {
+        "city": "Hanoi",
+        "ward": "Ward 1",
+        "addressDetail": "123 Main St",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "password": "password456",
+    "image": "https://i.pravatar.cc/150?img=2",
+    "phone": "0987654321",
+    "address": [
+      {
+        "city": "Ho Chi Minh City",
+        "ward": "Ward 2",
+        "addressDetail": "456 Second St",
+        "isDefault": true
+      },
+      {
+        "city": "Da Nang",
+        "ward": "Ward 3",
+        "addressDetail": "789 Third St",
+        "isDefault": false
+      }
+    ]
+  },
+  {
+    "name": "Charlie Lee",
+    "email": "charlie@example.com",
+    "password": "password789",
+    "image": "https://i.pravatar.cc/150?img=3",
+    "phone": "0112233445"
+  }
+]

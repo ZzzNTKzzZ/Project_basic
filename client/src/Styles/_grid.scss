@@ -1,0 +1,16 @@
+@use "./variable" as *;
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / $grid-columns);
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+    
+  }
+}

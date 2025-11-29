@@ -1,0 +1,50 @@
+<h1 style="text-align: center;">🛍 Product List</h1>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  {{#each products}}
+    <div style="border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 220px; text-align: center; background: #fafafa;">
+      
+      <a href="/products/{{this.slug}}" style="text-decoration: none; color: inherit;">
+        <h3>{{this.name}}</h3>
+      </a>
+
+      <p><strong>Price:</strong> ${{this.price}}</p>
+      <p style="font-size: 14px; color: #666;">{{this.des}}</p>
+
+      {{#if this.image}}
+        <a href="/products/{{this.slug}}">
+          <img 
+            src="{{this.image}}" 
+            alt="{{this.name}}" 
+            style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px;"
+          />
+        </a>
+      {{else}}
+        <div style="width: 100%; height: 150px; background: #eee; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #888;">
+          <em>No image</em>
+        </div>
+      {{/if}}
+
+      {{#if this.tags}}
+        <div style="margin-top: 8px;">
+          {{#each this.tags}}
+            <span 
+              style="background: #007bff20; color: #007bff; padding: 3px 6px; border-radius: 4px; margin: 2px; font-size: 12px;"
+            >
+              {{this}}
+            </span>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      <div style="margin-top: 10px;">
+        <a 
+          href="/products/{{this.slug}}" 
+          style="display: inline-block; background: #007bff; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;"
+        >
+          View Details
+        </a>
+      </div>
+    </div>
+  {{/each}}
+</div>

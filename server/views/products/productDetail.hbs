@@ -1,0 +1,25 @@
+{{! Use the main layout }}
+{{! productDetail.hbs }}
+
+<h1>{{product.name}}</h1>
+
+{{#if product.imageSrc}}
+  <img src="{{product.imageSrc}}" alt="{{product.name}}" style="max-width:300px; border-radius:8px;">
+{{/if}}
+
+<p><strong>Price:</strong> ${{product.price}}</p>
+
+{{#if product.des}}
+  <p><strong>Description:</strong> {{product.des}}</p>
+{{/if}}
+
+{{#if product.tags.length}}
+  <p><strong>Tags:</strong></p>
+  <ul>
+    {{#each product.tags}}
+      <li>{{this.name}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+<p><small>Created at: {{product.createdAt}}</small></p>

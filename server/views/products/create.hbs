@@ -1,0 +1,30 @@
+<h1>Add Product</h1>
+
+<form action="/products/add" method="POST" enctype="multipart/form-data" class="mt-3">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" name="name" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Price</label>
+    <input type="number" name="price" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="des" class="form-control"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Tags (comma-separated)</label>
+    <input type="text" name="tags" class="form-control" placeholder="e.g. best sale, new arrival">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Product Image</label>
+    <input type="file" name="image" class="form-control" accept="image/*">
+  </div>
+
+  <button type="submit" class="btn btn-success">Save</button>
+</form>

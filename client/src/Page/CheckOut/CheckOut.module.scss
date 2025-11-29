@@ -1,0 +1,182 @@
+@use "../../Styles/variable" as *;
+@use "../../Styles/mixins" as *;
+
+.wrapper {
+    @include body-400;
+    background-color: $secondary-color;
+    padding: 1rem;
+
+    .header,
+    .body,
+    .pay {
+        background-color: $primary-color;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 6px;
+        border-radius: 1rem;
+        padding: 1.5rem 2.5rem;
+        gap: 2rem;
+    }
+
+    .header {
+        gap: 0.5rem;
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .infoUser {
+            display: flex;
+            gap: 4px;
+
+            .name,
+            .phone {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .body {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+
+        .shopNote {
+            display: flex;
+            align-items: center;
+
+            label {
+                padding-right: 0.5rem;
+            }
+
+            .noteInput {
+                height: 2rem;
+            }
+        }
+
+    }
+
+    .pay {
+        margin-top: 1rem;
+        gap: 1rem;
+
+        .headerPay {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            .paymentMethod {
+                padding-right: 3rem;
+            }
+
+            .changePaymentBtn {
+                p {
+                    color: $accent-color;
+                }
+            }
+        }
+
+        .priceList {
+            width: 100%;
+            font-size: 1.25rem;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr max-content max-content;
+            grid-column-gap: 1rem;
+            align-items: center;
+            span {
+                color: $accent-color;
+            }
+
+            .price{
+
+                font-size: 1rem;
+            }
+
+            .totalPayment {
+                font-size: 2rem;
+
+            }
+        }
+        .order {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .orderBtn {
+                width: 12rem;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .items {
+        width: 100%;
+    }
+}
+
+.checkoutItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    .product {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .image {
+        img {
+            width: 65px;
+        }
+    }
+
+    .product {
+        width: 40%;
+    }
+
+    .variants {
+        width: 10%;
+        font-size: 1.25rem;
+        color: #ffffff80;
+    }
+}
+
+// COLUMN
+.product {
+    width: 55%;
+
+}
+
+.price,
+.quantity,
+.amount {
+    width: 10%;
+    text-align: right;
+}
+
+.c1 {
+    flex: 1;
+}
+
+
+.line {
+    width: 100%;
+    border: 0.5px $accent-color dashed;
+}

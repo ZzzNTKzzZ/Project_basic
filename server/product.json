@@ -1,0 +1,489 @@
+[
+  {
+    "name": "Áo có chi tiết xoắn",
+    "price": 399000,
+    "salePrice": 299000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "X"] },
+    "image": "/uploads/products/Áo_có_chi_tiết_xoắn.jpg",
+    "category": "Áo",
+    "tags": ["Sale", "New arrival"],
+    "sold": 25
+  },
+  {
+    "name": "Áo dài tay sợi siêu mịn",
+    "price": 249000,
+    "variations": { "sizes": ["XXS", "XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_dài_tay_sợi_siêu_mịn.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 100
+  },
+  {
+    "name": "Áo dệt kim gân nổi có cổ",
+    "price": 449000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_dệt_kim_gân_nổi_có_cổ.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 90
+  },
+  {
+    "name": "Áo gi-lê denim",
+    "price": 799000,
+    "variations": { "sizes": ["XXS", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_gi-lê_denim.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 3
+  },
+  {
+    "name": "Áo lệch vai xếp rủ",
+    "price": 349000,
+    "variations": { "sizes": ["đen", "XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_lệch_vai_xếp_rủ.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 4
+  },
+  {
+    "name": "Áo polo cotton",
+    "price": 399000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_polo_cotton.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo polo cotton đen",
+    "price": 699000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_polo_cotton_đen.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun gân nổi",
+    "price": 249000,
+    "variations": { "sizes": ["XXS", "XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_gân_nổi.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun in hình kiểu vintage Loose Fit Guns N' Roses",
+    "price": 499000,
+    "variations": { "sizes": ["S", "M", "L", "X"] },
+    "image": "/uploads/products/Áo_thun_in_hình_kiểu_vintage_Loose_Fit_Guns_N'_Roses.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun in hình kiểu vintage Loose Fit Nirvana",
+    "price": 349000,
+    "variations": { "sizes": ["S", "M", "L"] },
+    "image": "/uploads/products/Áo_thun_in_hình_kiểu_vintage_Loose_Fit_Nirvana.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun in hình Loose Fit hồng đào",
+    "price": 299000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_in_hình_Loose_Fit_hồng_đào.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun in hình Loose Fit màu trắng",
+    "price": 399000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_in_hình_Loose_Fit_màu_trắng.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun in hình Loose Fit small talk",
+    "price": 399000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_in_hình_Loose_Fit_small_talk.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun Loose Fit đen",
+    "price": 249000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_Loose_Fit_đen.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun Loose Fit trắng",
+    "price": 149000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_Loose_Fit_trắng.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun Loose Fit Oasis",
+    "price": 399000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_Loose_Fit_Oasis.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun Loose Fit Pink Floyd",
+    "price": 399000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_Loose_Fit_Pink_Floyd.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun Loose Fit snoopy",
+    "price": 399000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_thun_Loose_Fit_snoopy.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo thun tay ráp lăng",
+    "price": 399000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XS"] },
+    "image": "/uploads/products/Áo_thun_tay_ráp_lăng.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo xếp nếp",
+    "price": 249000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_xếp_nếp.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie in hình Oversized All is Fading",
+    "price": 999000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_hoodie_in_hình_Oversized_All_is_Fading.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie in hình Oversized Fit Tượng Nữ thần Tự do",
+    "price": 999000,
+    "variations": { "sizes": ["S", "M", "L"] },
+    "image": "/uploads/products/Áo_hoodie_in_hình_Oversized_Fit_Tượng_Nữ_thần_Tự_do.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie kéo khóa quá khổ Vừa vặn",
+    "price": 999000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_hoodie_kéo_khóa_quá_khổ_Vừa_vặn.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie Loose Fit Màu đen",
+    "price": 499000,
+    "variations": { "sizes": ["đen", "XS", "S", "M", "L", "XL", "XXL"] },
+    "image": "/uploads/products/Áo_hoodie_Loose_Fit_Màu_đen.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie Loose Nirvana",
+    "price": 899000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_hoodie_Loose_Nirvana.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie Loose Paris",
+    "price": 7999000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_hoodie_Loose_Paris.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie Oversized Fit bạc màu",
+    "price": 999000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_hoodie_Oversized_Fit_bạc_màu.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo Polo dáng rộng",
+    "price": 699000,
+    "variations": { "sizes": ["XS", "S", "M"] },
+    "image": "/uploads/products/Áo_Polo_dáng_rộng.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo Rugby",
+    "price": 699000,
+    "variations": { "sizes": ["XS", "S", "M", "L"] },
+    "image": "/uploads/products/Áo_Rugby.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo hoodie hình hộp Le Strade",
+    "price": 899000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_hoodie_hình_hộp_Le_Strade.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo jersey dệt ô vuông Slim Fit trắng",
+    "price": 449000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_jersey_dệt_ô_vuông_Slim_Fit_trắng.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo jersey Regular đen",
+    "price": 249000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_jersey_Regular_đen.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo jersey Regular Fit xanh lá rừng",
+    "price": 249000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_jersey_Regular_Fit_xanh_lá_rừng.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo sơ mi bằng cotton relaxed",
+    "price": 899000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_sơ_mi_bằng_cotton_relaxed.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo sơ mi Loose Fit xanh tím than",
+    "price": 999000,
+    "variations": { "sizes": ["X", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_sơ_mi_Loose_Fit_xanh_tím_than.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo sơ mi nhăn Loose",
+    "price": 799000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_sơ_mi_nhăn_Loose.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo sơ mi Relaxed Fit",
+    "price": 699000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_sơ_mi_Relaxed_Fit.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo sơ mi Relaxed Fit xanh kaki",
+    "price": 799000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_sơ_mi_Relaxed_Fit_xanh_kaki.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Áo sơ mi Relaxed Fit xanh đậm kẻ nhỏ",
+    "price": 699000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Áo_sơ_mi_Relaxed_Fit_xanh_đậm_kẻ_nhỏ.jpg",
+    "category": "Áo",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Baggy Jeans màu đen",
+    "price": 999000,
+    "variations": { "sizes": ["28-30", "29-30", "30-30"] },
+    "image": "/uploads/products/Baggy_Jeans_màu_đen.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jean rộng xanh denim đậm",
+    "price": 1199000,
+    "variations": { "sizes": ["28-30", "30-30", "32-30"] },
+    "image": "/uploads/products/Baggy_Jeans_rộng_xanh_denim_đậm.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Baggy jeans xanh denim",
+    "price": 999000,
+    "variations": { "sizes": ["28-30", "29-30", "30-30"] },
+    "image": "/uploads/products/Baggy_jean_xanh_denim.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jean baggy xanh denim",
+    "price": 999000,
+    "variations": { "sizes": ["28-30", "30-30", "32-30"] },
+    "image": "/uploads/products/Quần_jean_baggy_xanh_denim.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jeans màu xanh denim đậm",
+    "price": 899000,
+    "variations": { "sizes": ["28-30", "29-30", "30-30", "31-30"] },
+    "image": "/uploads/products/Quần_jeans_màu_xanh_denim_đậm.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jeans màu xanh lá denim xanh dương",
+    "price": 999000,
+    "variations": { "sizes": ["28-30", "30-30", "31-30"] },
+    "image": "/uploads/products/Quần_jeans_màu_xanh_lá_denim_xanh_dương.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jean có ly chiết dáng baggy xanh denim đậm",
+    "price": 1199000,
+    "variations": { "sizes": ["28-30", "30-30"] },
+    "image": "/uploads/products/Quần_jean_có_ly_chiết_dáng_baggy_xanh_denim_đậm.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần cigaretee",
+    "price": 599000,
+    "variations": { "sizes": ["28-30", "30-30", "32-30"] },
+    "image": "/uploads/products/Quần_cigaretee.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jean màu đậm",
+    "price": 799000,
+    "variations": { "sizes": ["28-30", "29-30"] },
+    "image": "/uploads/products/Quần_jean_màu_đậm.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Quần jeans Relaxed màu đen",
+    "price": 699000,
+    "variations": { "sizes": ["28-30", "30-30", "31-30", "32-30"] },
+    "image": "/uploads/products/Quần_jeans_Relaxed_màu_đen.jpg",
+    "category": "Quần",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Váy denim có chân váy xoè xanh",
+    "price": 899000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Váy_denim_có_chân_váy_xoè_xanh.jpg",
+    "category": "Váy",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Váy denim có mặt khoá trắng",
+    "price": 799000,
+    "variations": { "sizes": ["XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Váy_denim_có_mặt_khoá_trắng.jpg",
+    "category": "Váy",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Váy denim kéo khoá phía trước",
+    "price": 899000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Váy_denim_kéo_khoá_phía_trước.jpg",
+    "category": "Váy",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Váy denim không tay",
+    "price": 799000,
+    "variations": { "sizes": ["XXS", "XS", "S", "M", "L", "XL"] },
+    "image": "/uploads/products/Váy_denim_không_tay.jpg",
+    "category": "Váy",
+    "tags": [],
+    "sold": 0
+  },
+  {
+    "name": "Váy denim xanh",
+    "price": 799000,
+    "variations": { "sizes": ["S", "M", "L", "XL"] },
+    "image": "/uploads/products/Váy_denim_xanh.jpg",
+    "category": "Váy",
+    "tags": [],
+    "sold": 0
+  }
+]

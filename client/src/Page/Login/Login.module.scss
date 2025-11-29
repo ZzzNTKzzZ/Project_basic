@@ -1,0 +1,91 @@
+@use "../../Styles/variable" as *;
+@use "../../Styles/mixins" as *;
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background-color: #f7f7f7;
+
+    .left {
+        flex: 1;
+        background-color: $primary-color;
+        color: #fff;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        span {
+            @include body-400;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+            max-width: 350px;
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mode {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+
+
+    }
+
+
+    button {
+
+
+        &:hover {
+            span {
+
+                color: #000;
+            }
+        }
+    }
+
+}
+
+.loginBox {
+    width: 400px;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $primary-color;
+    }
+}
+
+.fromLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}

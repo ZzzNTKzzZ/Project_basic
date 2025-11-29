@@ -1,0 +1,183 @@
+@use "../../Styles/variable" as *;
+@use "../../Styles/mixins" as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $primary-color;
+  padding: 0.25rem 0.75rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  outline: 2px solid #fff;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  .content {
+    @include body-400;
+    font-size: 1.25rem;
+  }
+
+  svg path {
+    fill: $accent-color;
+    transition: fill 0.2s ease;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+    outline: 2px solid $accent-color;
+
+    svg path {
+      fill: #fff;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6; // optional, to visually show it's disabled
+  }
+
+  /* ===============================
+     🔗 LINK STYLE (for <a> elements)
+     =============================== */
+  &.isLink {
+    background-color: transparent;
+    color: #fff;
+
+    .content {
+      font-size: 1.125rem;
+    }
+
+    /* Link Type 1 — behaves like Button Type 1 */
+    &.type_1 {
+      background-color: $accent-color;
+      color: #fff;
+      outline: none;
+
+      &:hover {
+        background-color: transparent;
+        outline: 2px solid #fff;
+      }
+
+      &:active {
+        color: $accent-color;
+        outline: 2px solid $accent-color;
+      }
+    }
+
+    /* Link Type 2 — behaves like Button Type 2 */
+    &.type_2 {
+      background-color: transparent;
+      outline: 2px solid #fff;
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $accent-color;
+        outline: none;
+      }
+
+      &.isActive,
+      &:active {
+        background-color: $accent-color;
+        color: $primary-color;
+        outline: none;
+      }
+    }
+
+    /* Link with only icon */
+    &.icon {
+      aspect-ratio: 1;
+      border-radius: 2px;
+      outline-color: $accent-color;
+
+      &:hover {
+        background-color: $accent-color;
+
+        svg path {
+          fill: $primary-color;
+        }
+      }
+
+      &:active {
+        background-color: $secondary-color;
+
+        svg path {
+          fill: $accent-color;
+        }
+      }
+    }
+  }
+
+  /* ===============================
+     🧱 BUTTON STYLE (for <button>)
+     =============================== */
+  &.isButton {
+
+    &.type_1,
+    &.type_2 {
+      color: #fff;
+      outline: none;
+    }
+
+    /* --- Type 1: Filled --- */
+    &.type_1 {
+      background-color: $accent-color;
+
+      &:hover {
+        outline: 2px solid #fff;
+        background-color: transparent;
+
+      }
+
+      &:active {
+        color: $accent-color;
+        outline: 2px solid $accent-color;
+      }
+    }
+
+    /* --- Type 2: Outline --- */
+    &.type_2 {
+      background-color: transparent;
+      outline: 2px solid #fff;
+
+      &:hover {
+        outline: none;
+        background-color: $secondary-color;
+        color: $accent-color;
+      }
+
+      &.isActive,
+      &:active {
+        outline: none;
+        background-color: $accent-color;
+        color: $primary-color;
+      }
+    }
+
+    /* --- Icon Only --- */
+    &.icon {
+      aspect-ratio: 1;
+      border-radius: 2px;
+      outline-color: $accent-color;
+
+      &:hover {
+        background-color: $accent-color;
+
+        svg path {
+          fill: $primary-color;
+        }
+      }
+
+      &:active {
+        background-color: $secondary-color;
+
+        svg path {
+          fill: $accent-color;
+        }
+      }
+    }
+  }
+}

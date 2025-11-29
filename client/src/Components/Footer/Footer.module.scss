@@ -1,0 +1,69 @@
+@use "../../Styles/variable" as *;
+@use "../../Styles/mixins" as *;
+
+.background {
+    padding: 2rem 0;
+    border-top: 1px solid $accent-color;
+    width: 100%;
+    background-color: $primary-color;
+    .wrapper {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .logo,
+    .social {
+        margin-left: -$gutter-width;
+        margin-right: -$gutter-width;
+    }
+
+    .logo {
+        .des {
+            @include body-400;
+            font-size: 14px;
+        }
+    }
+
+    .social {
+        .iconSocials {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .icon {
+                cursor: pointer;
+                opacity: 0.6;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+
+    .body {
+        display: flex;
+        justify-content: space-around;
+
+        .section {
+            flex: 1;
+
+            .list {
+                li {
+                    @include body-400;
+                    font-size: 16px;
+                    margin-bottom: 0.5rem;
+                    opacity: 0.3;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+            }
+        }
+    }
+}

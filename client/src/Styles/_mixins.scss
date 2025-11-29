@@ -1,0 +1,32 @@
+@use "./variable" as *;
+
+@mixin heading-400 {
+    font-family: $heading-font;
+    font-size: 32px;
+    line-height: 1.5;
+    letter-spacing: 12px;
+    font-weight: 400;
+}
+
+@mixin body-font {
+    font-family: $body-font;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+@mixin body-400 {
+    @include body-font();
+    font-weight: 400;
+}
+
+
+@mixin body-500 {
+    @include body-font();
+    font-weight: 500;
+}
+
+
+@mixin body-600 {
+    @include body-font();
+    font-weight: 600;
+}

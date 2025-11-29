@@ -1,0 +1,31 @@
+@use "../../Styles/variable" as *;
+
+.wrapper {
+    width: max-content;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    display: block;
+
+    &.sales {
+        position: relative;
+
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 125%;
+            height: 125%;
+            transform: translate(-50%, -50%); 
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .text {
+        }
+    }
+
+    &.newArrival {
+        border: 1px solid $accent-color;
+        border-radius: 0.5rem;
+    }
+}

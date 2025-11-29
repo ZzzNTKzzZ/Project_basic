@@ -1,0 +1,28 @@
+.wrapper {
+    overflow: hidden;
+    .brandBanner {
+        margin-top: 5.5rem;
+        margin-left: -200px;
+        margin-right: -200px;
+        animation: scrollInfinite 20s linear 1s infinite;
+        animation-direction: alternate;
+    }
+
+    .sportLight {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes scrollInfinite {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+}

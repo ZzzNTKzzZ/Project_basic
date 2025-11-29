@@ -1,0 +1,66 @@
+@use "../../Styles/variable" as *;
+
+.wrapper {
+    margin: -$gutter-width;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .content {
+        .heading {
+            display: flex;
+            flex-direction: column;
+
+            .line {
+                height: 5px;
+                background: #fff;
+                animation: lineAnimation 2s cubic-bezier(0.65, 0, 0.35, 1)x forwards;
+            }
+        }
+
+        .des {
+            margin-top: 1.25rem;
+            margin-bottom: 2.5rem;
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+        }
+
+        .btnGroup {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+
+            .btnBanner {
+                padding: 0.625rem 2.75rem;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes lineAnimation {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 75%;
+    }
+}
