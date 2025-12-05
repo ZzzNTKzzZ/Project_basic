@@ -1,0 +1,26 @@
+@use "../../Styles/variable" as *;
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 6px;
+    margin-bottom: 0.5rem;
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .separator {
+    color: $accent-color;
+  }
+
+  .current {
+    color: #fff;
+    font-weight: 500;
+  }
+}
