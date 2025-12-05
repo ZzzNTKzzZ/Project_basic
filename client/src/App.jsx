@@ -21,6 +21,9 @@ import Account from "./Page/Account";
 import Profile from "./Page/Account/Profile";
 import Address from "./Page/Account/Address";
 import Order, { AllOrder } from "./Page/Account/Order";
+import Admin from "./Page/Admin";
+import DashBoard from "./Page/Admin/DashBoard";
+import User from "./Page/Admin/User";
 
 function AppProvider({ children }) {
   return (
@@ -52,9 +55,10 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="shop">
-              <Route index element={<Shop />}/>
+              <Route index element={<Shop />} />
               <Route path="new_arrival" element={<Shop />} />
               <Route path="sale" element={<Shop />} />
+              <Route path="products" element={<Navigate to={"/shop"} replace/>} />
             </Route>
             <Route path="shop/products/:slug" element={<ProductDetail />} />
             <Route path="cart" element={<CartPage />} />
@@ -69,6 +73,12 @@ export default function App() {
             </Route>
           </Route>
           <Route path="login" element={<Login />} />
+          <Route path="admin" element={<Admin />}>
+            <Route index element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<DashBoard />} />
+            <Route path="user" element={<User />} />
+            <Route path="product" element={<div>Product</div>} />
+          </Route>
         </Routes>
       </AppProvider>
     </BrowserRouter>
