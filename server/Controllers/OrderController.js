@@ -4,6 +4,26 @@ import OrderItem from "../Model/OrderItem.js";
 import pick from "lodash/pick.js";
 const ALLOWED = ["quantity", "variants"];
 export default class OrderController {
+  // GET /
+  static async orders(req, res) {
+    try {
+      const orders = await Order.find({}).sort({ createdAt: -1 }).populate({
+        path: "user",
+        select: "name"
+      }).populate({
+        path: "orderItems",
+        select: "product quantity",
+        populate: {
+          path: "product",
+          select: "name price"
+        }
+      })
+      res.json(orders);
+    } catch (error) {
+      res.status(500).send("Server error");
+    }
+  }
+
   // GET /:id
   static async order(req, res) {
     try {
@@ -18,8 +38,30 @@ export default class OrderController {
         })
         .sort({ createdAt: -1 });
       if (!order) return res.status(404).send("Order not found");
-      console.log(Array.isArray(order));
       res.json(order);
+    } catch (error) {
+      res.status(500).send("Server error");
+    }
+  }
+
+  // GET /latest
+  static async latest(req, res) {
+    try {
+      const orders = await Order.find({})
+        .sort({ createdAt: -1 })
+        .limit(5)
+        .populate({
+          path: "user",
+          select: "name email image",
+        })
+        .populate({
+          path: "orderItems",
+          populate: {
+            path: "product",
+            select: "name price image variations",
+          },
+        });
+      res.json(orders);
     } catch (error) {
       res.status(500).send("Server error");
     }

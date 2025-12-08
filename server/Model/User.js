@@ -22,7 +22,13 @@ const User = new Schema(
     phone: String,
     address: [AddressSubSchema],
     cart: { type: mongoose.Schema.Types.ObjectId, ref: "Cart" },
-    orders: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }]
+    orders: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }],
+    role: {
+      type: String,
+      enum: ["admin", "user"],
+      default: "user",
+    }
+
   },
   { timestamps: true }
 );

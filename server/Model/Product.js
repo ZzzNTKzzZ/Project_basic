@@ -42,7 +42,6 @@ const Product = new Schema(
     slug: String,
     isNew: { type: Boolean, default: false }, // for "New arrival" tag
     isOnSale: { type: Boolean, default: false }, // automatically check if salePrice exists
-    sku: { type: String, unique: true }, // Stock Keeping Unit
   },
   { timestamps: true }
 );

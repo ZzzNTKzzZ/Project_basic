@@ -4,7 +4,7 @@ export default class UserController {
   // GET: /
   static async users(req, res) {
     try {
-      const users = await User.find({}).select("_id name email phone password");
+      const users = await User.find({}).populate();
       return res.json(users);
     } catch (error) {
       console.log(error);
@@ -91,7 +91,6 @@ export default class UserController {
       const { name, email, password } = req.body;
 
       const user = await User.findOne({ email });
-      console.log(user);
       if (user) {
         return res.status(404).json({ error: "User avaliable" }); // handle exist user
       }

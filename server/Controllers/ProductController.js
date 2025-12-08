@@ -8,7 +8,7 @@ export default class ProductController {
   // GET: /?category&?minPrice&?maxPrice&?sort
   static async products(req, res) {
     try {
-      const { category, minPrice, maxPrice, sort } = req.query;
+      const { category, minPrice, maxPrice, sort, bestSeller } = req.query;
       const filter = {};
       const sortType = {};
 
@@ -51,16 +51,8 @@ export default class ProductController {
       const formatted = products.map((p) => {
         return {
           ...p.toObject(),
-          price: p.price.toLocaleString("vi-VN", {
-            style: "currency",
-            currency: "VND",
-          }),
-          sale: p.salePrice
-            ? p.salePrice.toLocaleString("vi-VN", {
-                style: "currency",
-                currency: "VND",
-              })
-            : null,
+          price: p.price,
+          sale: p.salePrice ? p.salePrice : null,
           tags: p.tags.map((t) => t.name),
         };
       });
@@ -71,29 +63,50 @@ export default class ProductController {
     }
   }
 
-  // GET: /:tag
- static async productsByTag(req, res) {
-  try {
-    const path = req.params.tag; // "sale" or "new_arrivals"
-
-    // Map route to boolean field
-    const flagMap = {
-      sale: "isOnSale",
-      new_arrival: "isNew",
-    };
-
-    const field = flagMap[path];
-    if (!field) return res.status(400).json({ message: "Invalid flag" });
-
-    const products = await Product.find({ [field]: true });
-
-    return res.json(products);
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: "Server error" });
+  // GET:/bestSeller
+  static async bestSeller(req, res) {
+    try {
+      const products = await Product.find({}).sort({ sold: -1 }).limit(5);
+      res.json(products);
+    } catch (error) {
+      console.log(error);
+    }
   }
-}
 
+  // GET: /:tag
+  static async productsByTag(req, res) {
+    try {
+      const path = req.params.tag; // "sale" or "new_arrivals"
+
+      // Map route to boolean field
+      const flagMap = {
+        sale: "isOnSale",
+        new_arrival: "isNew",
+      };
+
+      const field = flagMap[path];
+      if (!field) return res.status(400).json({ message: "Invalid flag" });
+
+      const products = await Product.find({ [field]: true }).populate({
+        path: "tags",
+        select: "name",
+      });
+
+      const formatted = products.map((p) => {
+        return {
+          ...p.toObject(),
+          price: p.price,
+          sale: p.salePrice ? p.salePrice : null,
+          tags: p.tags.map((t) => t.name),
+        };
+      });
+
+      return res.json(formatted);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: "Server error" });
+    }
+  }
 
   // GET: /create
   static async create(req, res) {
@@ -113,10 +126,8 @@ export default class ProductController {
 
       const formatted = {
         ...product.toObject(),
-        price: product.price.toLocaleString("vi-VN", {
-          style: "currency",
-          currency: "VND",
-        }),
+        price: product.price,
+          sale: product.salePrice ? product.salePrice : null,
       };
 
       if (!product) return res.status(404).send("Product not found");

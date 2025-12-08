@@ -14,6 +14,8 @@ const router = express.Router();
 
 // /products
 router.get("/" , ProductController.products) // Get all products
+// /products/bestSeller
+router.get("/bestSeller", ProductController.bestSeller) // Get best seller product
 // /products/tag
 router.get("/tag/:tag", ProductController.productsByTag)
 // /products/create

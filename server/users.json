@@ -12,7 +12,8 @@
         "addressDetail": "123 Main St",
         "isDefault": true
       }
-    ]
+    ],
+    "role": "user"
   },
   {
     "name": "Bob Smith",
@@ -33,13 +34,22 @@
         "addressDetail": "789 Third St",
         "isDefault": false
       }
-    ]
+    ],
+    "role": "user"
   },
   {
     "name": "Charlie Lee",
     "email": "charlie@example.com",
     "password": "password789",
     "image": "https://i.pravatar.cc/150?img=3",
-    "phone": "0112233445"
+    "phone": "0112233445",
+    "role": "user"
+  },
+  {
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "phone": "011111111",
+    "password": "123456",
+    "role": "admin"
   }
 ]

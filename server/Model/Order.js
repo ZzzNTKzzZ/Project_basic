@@ -26,7 +26,7 @@ Order.pre("save", async function (next) {
     let total = 0;
 
     for (const item of items) {
-      total += item.price * item.quantity;
+      total += item.product.price * item.quantity;
     }
 
     this.price = total;
@@ -35,6 +35,7 @@ Order.pre("save", async function (next) {
     next(err);
   }
 });
+
 
 
 export default mongoose.model("Order", Order);
