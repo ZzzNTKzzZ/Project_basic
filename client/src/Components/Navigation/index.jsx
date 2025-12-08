@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Bag, Heart, Search, User } from "../../Assets";
 import Button from "../Button";
 import styles from "./Navigation.module.scss";
@@ -12,16 +12,16 @@ import useClickOutside from "../../Hook/useClickOutSide";
 
 export default function Navigation() {
   const navItems = [
-    {name: "Home", link: "home"},
-    {name: "Shop", link: "shop"},
-    {name: "New Arrival", link: "shop/new_arrival"},
-    {name: "Sale", link: "shop/sale"},
-    
-  ]
+    { name: "Home", link: "home" },
+    { name: "Shop", link: "shop" },
+    { name: "New Arrival", link: "shop/new_arrival" },
+    { name: "Sale", link: "shop/sale" },
+  ];
+
   const { user, setUser } = useUser();
   const { totalItems } = useCart();
 
-  const optionRef = useRef(null)
+  const optionRef = useRef(null);
   const [openCart, setOpenCart] = useState(false);
   const [popUpOptions, setPopUpOptions] = useState(false);
 
@@ -36,11 +36,19 @@ export default function Navigation() {
   };
 
   const handleLogOut = () => {
-    localStorage.removeItem("user")
-    setUser({})
-  }
+    localStorage.removeItem("user");
+    setUser({});
+  };
 
-  useClickOutside(optionRef, () => setPopUpOptions(false), popUpOptions)
+  // USER MENU OPTIONS LIST
+  const userOptions = [
+    { label: "My account", link: "/account/profile" },
+    { label: "Order", link: "/account/order" },
+    { label: "Report", link: "/admin", adminOnly: true },
+    { label: "Log out", action: handleLogOut },
+  ];
+
+  useClickOutside(optionRef, () => setPopUpOptions(false), popUpOptions);
 
   return (
     <nav className={styles.wrapper}>
@@ -99,14 +107,31 @@ export default function Navigation() {
 
         {/* USER OPTIONS POPUP */}
         {popUpOptions && (
-          <div className={styles.optionUser} ref={optionRef} onClick={() => setPopUpOptions(false)}>
-              <Link to={"/account/profile"} className={styles.option}>
-                My account
-              </Link>
-              <Link to={"/account/order"} className={styles.option}>
-                Order
-              </Link>
-            <span className={styles.option} onClick={handleLogOut}>Log out</span>
+          <div
+            className={styles.optionUser}
+            ref={optionRef}
+            onClick={() => setPopUpOptions(false)}
+          >
+            {userOptions.map((opt, i) => {
+              // Admin only item
+              if (opt.adminOnly && user.role !== "admin") return null;
+
+              // Link item
+              if (opt.link) {
+                return (
+                  <Link key={i} to={opt.link} className={styles.option}>
+                    {opt.label}
+                  </Link>
+                );
+              }
+
+              // Action item (logout)
+              return (
+                <span key={i} className={styles.option} onClick={opt.action}>
+                  {opt.label}
+                </span>
+              );
+            })}
           </div>
         )}
       </div>

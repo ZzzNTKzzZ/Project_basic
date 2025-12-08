@@ -26,8 +26,10 @@ function SignUpBox() {
         console.error("Sign In error:", data.error);
         return;
       }
+      
       setUser(data);
-      localStorage.setItem("user", JSON.stringify(data))
+      console.log("Sign up success:", data);
+
     } catch (error) {
       console.log("Sign In: ", error);
     }

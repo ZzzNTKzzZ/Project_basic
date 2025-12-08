@@ -62,7 +62,6 @@ export default function Shop() {
       );
       const data = await res.json();
       setProducts(data);
-      console.log(data)
       setLoading(false);
     };
 

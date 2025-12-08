@@ -13,8 +13,32 @@ export default function Account() {
   useEffect(() => {
     setAddress(user.address);
   }, [user]);
+
+  // ===========================
+  // SIDEBAR CONFIG LIST
+  // ===========================
+  const sidebarMenu = [
+    {
+      title: "My account",
+      icon: <User />,
+      root: "profile",
+      sub: [
+        { name: "Profile", path: "profile" },
+        { name: "Address", path: "address" },
+        { name: "Password", path: "password" },
+      ],
+    },
+    {
+      title: "Order",
+      icon: <Order />,
+      root: "order",
+      sub: [], // no children
+    },
+  ];
+
   return (
     <div className={`${styles.wrapper} container`}>
+      
       {/* Sidebar */}
       <div className={`col-3 ${styles.dashBoard}`}>
         <div className={styles.header}>
@@ -22,47 +46,31 @@ export default function Account() {
           <span className={styles.userName}>{user.name}</span>
         </div>
 
-        {/* Account */}
-        <div className={styles.option}>
-          <div className={styles.title}>
-            <span>
-              <User />
-            </span>
-            <Link to="profile">
-              <p>My account</p>
-            </Link>
-          </div>
-          <div className={styles.subOptions}>
-            <NavLink
-              to="profile"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-            >
-              Profile
-            </NavLink>
-            <NavLink
-              to="address"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-            >
-              Address
-            </NavLink>
-            <NavLink
-              to="password"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-            >
-              Password
-            </NavLink>
-          </div>
-        </div>
+        {/* AUTO-RENDER SIDEBAR */}
+        {sidebarMenu.map((section, i) => (
+          <div className={styles.option} key={i}>
+            <div className={styles.title}>
+              <span>{section.icon}</span>
+              <Link to={section.root}>{section.title}</Link>
+            </div>
 
-        {/* Orders */}
-        <div className={styles.option}>
-          <div className={styles.title}>
-            <span>
-              <Order />
-            </span>
-            <Link to="order">Order</Link>
+            {section.sub.length > 0 && (
+              <div className={styles.subOptions}>
+                {section.sub.map((sub) => (
+                  <NavLink
+                    key={sub.path}
+                    to={sub.path}
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    {sub.name}
+                  </NavLink>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
+        ))}
       </div>
 
       {/* Main Content */}

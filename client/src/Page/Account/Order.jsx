@@ -46,18 +46,24 @@ function ListOrder({ listOrder = [], loadingOrder }) {
                     </span>
                     <span className={styles.priceReview}>
                       <p className={styles.price}>
-                        ${item.product.price * item.quantity}
+                        {(item.product.price * item.quantity).toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
                       </p>
                     </span>
                   </div>
                 </div>
               ))}
               <span className={styles.amount}>
-                <p>Total amount:</p>$
+                <p>Total amount:</p>
                 {order.orderItems.reduce(
                   (total, item) => total + item.product.price * item.quantity,
                   0
-                )}
+                ).toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
               </span>
               <span className={styles.repurchase}>
                 <Button onClick={() => handleRepurchase(order.orderItems)}>

@@ -8,9 +8,6 @@
     border-radius: 2px;
 
     &.withIcon {
-        .icon {
-            width: 35%;
-        }
         input {
             width: 80%;
         }
@@ -30,7 +27,6 @@
         padding-inline: 0.75rem;
         height: 100%;
         width: 100%;
-        color: #000;
     }
 
     .icon {

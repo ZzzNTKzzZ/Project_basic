@@ -20,10 +20,12 @@ import Login from "./Page/Login";
 import Account from "./Page/Account";
 import Profile from "./Page/Account/Profile";
 import Address from "./Page/Account/Address";
-import Order, { AllOrder } from "./Page/Account/Order";
+import Order from "./Page/Account/Order";
 import Admin from "./Page/Admin";
 import DashBoard from "./Page/Admin/DashBoard";
 import User from "./Page/Admin/User";
+import Product from "./Page/Admin/Product";
+import OrderAdmin from "./Page/Admin/Order";
 
 function AppProvider({ children }) {
   return (
@@ -77,7 +79,8 @@ export default function App() {
             <Route index element={<Navigate to="dashboard" replace />} />
             <Route path="dashboard" element={<DashBoard />} />
             <Route path="user" element={<User />} />
-            <Route path="product" element={<div>Product</div>} />
+            <Route path="product" element={<Product />} />
+            <Route path="order" element={<OrderAdmin />} />
           </Route>
         </Routes>
       </AppProvider>

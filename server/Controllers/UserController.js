@@ -70,7 +70,6 @@ export default class UserController {
           select: "items",
           populate: {
             path: "items.product",
-            select: "name price image variations",
           },
         },
       ]);

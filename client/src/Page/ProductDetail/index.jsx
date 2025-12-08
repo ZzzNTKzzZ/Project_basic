@@ -8,11 +8,12 @@ import QuantitySelector from "./Quantity";
 import Rating from "../../Components/Rating";
 import ProductList from "../../Components/ProductList";
 import { useCheckOut } from "../../Hook/useCheckOutContext";
+import Breadcrumb from "../../Components/BreadCrumb";
 
 export default function ProductDetail() {
   const { slug } = useParams();
   const { addToCart } = useCart();
-  const { setCheckOutItems } = useCheckOut()
+  const { setCheckOutItems } = useCheckOut();
   const navigate = useNavigate();
 
   // === State ===
@@ -21,7 +22,6 @@ export default function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState({});
   const [validSelected, setValidSelected] = useState(true);
-
 
   // === Fetch product ===
   useEffect(() => {
@@ -74,7 +74,12 @@ export default function ProductDetail() {
     );
     setValidSelected(valid);
     if (!product) return;
-    addToCart({ ...product, quantity: quantity, variations: product.variations, variants: selected});
+    addToCart({
+      ...product,
+      quantity: quantity,
+      variations: product.variations,
+      variants: selected,
+    });
   };
 
   const handleBuyNow = () => {
@@ -82,12 +87,19 @@ export default function ProductDetail() {
     const valid = keys.every(
       (key) => selected[key] !== "" && selected !== null
     );
-    if(valid) {
-    navigate("/checkout")
+    if (valid) {
+      navigate("/checkout");
     }
     setValidSelected(valid);
     if (!product) return;
-    setCheckOutItems([{...product, quantity: quantity, variations: product.variations, variants: selected}])
+    setCheckOutItems([
+      {
+        ...product,
+        quantity: quantity,
+        variations: product.variations,
+        variants: selected,
+      },
+    ]);
   };
 
   // === Derived values ===
@@ -104,13 +116,7 @@ export default function ProductDetail() {
   return (
     <div className={`container ${styles.wrapper}`}>
       {/* Breadcrumbs */}
-      <nav className={styles.breadcrumb}>
-        <Link to="/">Home</Link>
-        <Arrow />
-        <Link to="/shop">Shop</Link>
-        <Arrow />
-        <span>{product.name}</span>
-      </nav>
+      <Breadcrumb currentPath={product.name} />
 
       {/* Product section */}
       <section className={styles.productSection}>
@@ -122,7 +128,6 @@ export default function ProductDetail() {
               alt={product.name}
             />
           </div>
-        
         </div>
 
         {/* Info */}
@@ -142,7 +147,31 @@ export default function ProductDetail() {
             </span>
           </div>
 
-          <p className={styles.price}>{product.price}</p>
+          <p className={styles.price}>
+            {product.isOnSale ? (
+              <span className={styles.sale}>
+                <span className={styles.price}>
+                  {product.sale.toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
+                </span>
+                <span className={styles.oldPrice}>
+                  {product.price.toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
+                </span>
+              </span>
+            ) : (
+              <span className={styles.price}>
+                {product.price.toLocaleString("vi-VN", {
+                  style: "currency",
+                  currency: "VND",
+                })}
+              </span>
+            )}
+          </p>
 
           {/* Variations */}
           <div

@@ -10,11 +10,8 @@ export default function ProductList() {
   const listCategory = [
     "New Arrivals",
     "Sale",
-    "Women's Wear",
-    "Men's Wear",
     "Dress",
-    "Top & Blouses",
-    "Pants & Jeans",
+    "Jean",
   ];
   const [isActive, setIsActive] = useState("New Arrivals");
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -71,7 +68,6 @@ export default function ProductList() {
             style={{ transform: `translateX(-${(currentIndex - 1) * 100}%)` }}
           >
             {products.map((product) =>{
-              console.log(product)
               return (
                 <ProductCard key={product._id} product={product} />
               )})}
@@ -87,7 +83,7 @@ export default function ProductList() {
       <Pagination
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
-        totalIndex={totalIndex}
+        totalIndex={5}
       />
     </div>
   );

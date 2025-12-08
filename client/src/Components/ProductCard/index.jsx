@@ -6,7 +6,6 @@ export default function ProductCard({ product, ...passProps }) {
   const { name, price, sale, tags, slug, image, sold } = product;
   if (!product) return null;
 
-  
   return (
     <Link
       to={`/shop/products/` + slug}
@@ -26,12 +25,25 @@ export default function ProductCard({ product, ...passProps }) {
             {sale ? (
               <span className={styles.sale}>
                 <span className={styles.price}>
-                {sale}
+                  {sale.toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
                 </span>
-                <span className={styles.oldPrice}>{price}</span>
+                <span className={styles.oldPrice}>
+                  {price.toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
+                </span>
               </span>
-) : (
-              <span className={styles.price}>{price}</span>
+            ) : (
+              <span className={styles.price}>
+                {price.toLocaleString("vi-VN", {
+                  style: "currency",
+                  currency: "VND",
+                })}
+              </span>
             )}
             <span className={styles.sold}>
               Sold <strong>{sold}</strong>

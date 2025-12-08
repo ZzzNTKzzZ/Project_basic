@@ -69,6 +69,17 @@
 
     .price {
         font-size: 1.5rem;
+        .sale {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
+
+    .oldPrice {
+        font-size: 1rem;
+        color: $accent-color;
+        text-decoration: line-through;
     }
 
     /* --- VARIATIONS --- */
@@ -84,7 +95,7 @@
             border-radius: 1rem;
         }
 
-        .variations{
+        .variations {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -168,8 +179,9 @@
     }
 
     /* --- QUANTITY BUTTONS --- */
-    
+
 }
+
 .quantityWrapper {
     display: flex;
     align-items: center;
@@ -213,7 +225,7 @@
     }
 }
 
-.quantityLabel, 
+.quantityLabel,
 .variationsLabel {
     font-size: 1.25rem;
 }

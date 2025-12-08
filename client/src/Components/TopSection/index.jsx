@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./TopSection.module.scss";
-
+import {
+  Image_Top_1,
+  Image_Top_2,
+  Image_Top_3,
+  Image_Top_4,
+  Image_Top_5,
+} from "../../Assets";
 const DEFAULT_ITEM = {
   name: "Product Name",
   des: {
@@ -13,7 +19,13 @@ const DEFAULT_ITEM = {
 
 export default function TopSection({ item = DEFAULT_ITEM }) {
   const [isHovered, setIsHovered] = useState(false);
-  const IMAGE_COUNT = 5;
+  const IMAGES = [
+    Image_Top_1,
+    Image_Top_2,
+    Image_Top_3,
+    Image_Top_4,
+    Image_Top_5,
+  ];
 
   const handleHover = (state) => () => setIsHovered(state);
 
@@ -30,15 +42,17 @@ export default function TopSection({ item = DEFAULT_ITEM }) {
           <div className={styles.curve}></div>
 
           <div className={styles.smallImages}>
-            {Array.from({ length: IMAGE_COUNT }, (_, i) => {
+            {IMAGES.map((image, i) => {
               const index = i + 1;
               return (
                 <div
                   key={index}
-                  className={`${styles.smallImage} ${styles[`locationImage_${index}`]}`}
+                  className={`${styles.smallImage} ${
+                    styles[`locationImage_${index}`]
+                  }`}
                 >
                   <img
-                    src={`/images/product-${index}.jpg`}
+                    src={`${image}`}
                     alt={`Product ${index}`}
                     draggable={false}
                   />
@@ -53,15 +67,13 @@ export default function TopSection({ item = DEFAULT_ITEM }) {
           <div className={styles.curve}></div>
 
           <div
-            className={`${styles.imageProduct} ${isHovered ? styles.isHover : ""}`}
+            className={`${styles.imageProduct} ${
+              isHovered ? styles.isHover : ""
+            }`}
             onMouseEnter={handleHover(true)}
             onMouseLeave={handleHover(false)}
           >
-            <img
-              src="/images/product.jpg"
-              alt={item.name}
-              draggable={false}
-            />
+            <img src={Image_Top_1} alt={item.name} draggable={false} />
 
             <div className={styles.backgroundName}>
               {isHovered ? (

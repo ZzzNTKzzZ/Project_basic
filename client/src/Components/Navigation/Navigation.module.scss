@@ -121,7 +121,8 @@
     background-color: $primary-color;
     cursor: pointer;
 
-    a, span {
+    a,
+    span {
       padding: 0.5rem 1rem;
 
       &:hover {

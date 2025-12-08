@@ -3,3 +3,8 @@ export { default as BrandCooperate } from "./BrandCooperate.png";
 export { default as AltImage } from "./AltImage.png";
 export { default as Collection_1 } from "./Collection1.png"
 export { default as Collection_2 } from "./Collection2.png"
+export { default as Image_Top_1 } from "./Áo_có_chi_tiết_xoắn.jpg"
+export { default as Image_Top_2 } from "./Áo_dài_tay_sợi_siêu_mịn.jpg" 
+export { default as Image_Top_3 } from "./Áo_dệt_kim_gân_nổi_có_cổ.jpg"
+export { default as Image_Top_4 } from "./Áo_gi-lê_denim.jpg"
+export { default as Image_Top_5 } from "./Áo_lệch_vai_xếp_rủ.jpg"

@@ -11,7 +11,7 @@ export function UserProvider({ children }) {
     if (storedUser) {
       try {
         setUser(JSON.parse(storedUser));
-        setLoadingUser(false)
+        setLoadingUser(false);
       } catch (e) {
         console.error("Failed to parse user from localStorage", e);
         setUser({});
@@ -22,11 +22,11 @@ export function UserProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
     // Only save to localStorage if user is not null/undefined
     if (user && Object.keys(user).length > 0) {
       localStorage.setItem("user", JSON.stringify(user));
     }
-    
   }, [user]);
 
   return (
