@@ -35,10 +35,6 @@ export default function CartRow({ product, isChecked, onToggleItem }) {
     setSelectedOptions((prev) => ({ ...prev, [key]: value }));
   };
 
-  useEffect(() => {
-    console.log("Cart item:", product);
-  }, [product]);
-
   return (
     <section className={styles.cartItem}>
       {/* Checkbox */}

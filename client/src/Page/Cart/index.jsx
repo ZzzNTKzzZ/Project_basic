@@ -59,7 +59,6 @@ export default function CartPage() {
       cartItems.length > 0 && selectedItems.length === cartItems.length;
     setIsAllChecked(allSelected);
     setAmount(() => {
-
       return selectedItems.reduce(
         (total, item) =>
           total +
@@ -73,7 +72,18 @@ export default function CartPage() {
     );
   }, [selectedItems, cartItems]);
 
-
+  useEffect(() => {
+  setSelectedItems((prev) =>
+    prev.map((item) => {
+      const updatedItem = cartItems.find(
+        (c) =>
+          c._id === item._id &&
+          JSON.stringify(c.variants) === JSON.stringify(item.variants)
+      );
+      return updatedItem || item;
+    })
+  );
+}, [cartItems]);
 
   return (
     <div className={styles.wrapper}>

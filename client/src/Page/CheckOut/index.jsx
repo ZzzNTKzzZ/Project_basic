@@ -42,7 +42,7 @@ export default function CheckOut() {
     0
   );
   const totalShippingFee = 0;
-  const totalPayment = totalPrice + totalShippingFee;
+  const totalPayment = 0 + totalShippingFee;
 
 const handleCheckOut = async () => {
   try {

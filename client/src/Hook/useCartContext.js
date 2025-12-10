@@ -80,7 +80,7 @@ export function CartProvider({ children }) {
         ...prev,
         cart: { ...prev.cart, items: data.items },
       }));
-
+      console.log(data)
       return data;
     } catch (error) {
       console.error("Failed to add cart items", error);
@@ -127,8 +127,7 @@ export function CartProvider({ children }) {
 
   const clearCart = () => setCartItems([]);
 
-  const totalItems = cartItems.length;
-
+  const totalItems = cartItems?.length;
   const value = {
     cartItems,
     setCartItems,
