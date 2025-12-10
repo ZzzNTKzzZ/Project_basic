@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const Order = new Schema({
   user: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "User" },
-  orderItems: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "OrderItem" }],
+  orderItems: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "OrderItem", default: [] }],
   status: {
     type: String,
     enum: ["Pending", "InTransit", "Completed", "Cancelled"], // allowed values

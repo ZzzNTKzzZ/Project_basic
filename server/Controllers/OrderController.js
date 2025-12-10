@@ -104,7 +104,7 @@ export default class OrderController {
   static async createOrder(req, res) {
     try {
       const { user, orderItems } = req.body;
-
+      console.log(user, orderItems)
       if (!orderItems || orderItems.length === 0) {
         return res.status(400).json({ message: "No order items provided" });
       }
